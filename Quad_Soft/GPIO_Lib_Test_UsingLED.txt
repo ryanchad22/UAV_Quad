@@ -1,0 +1,11 @@
+#Here is an example on how to usde the RPi.GPIO Library (Lib)
+import RPi.GPIO as GPIO         #Imports raspberry pi GPIO library and name$import time                     #Imports time library to set delays in our $
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BOARD)                #setmode as bboard pins (NOT BCM)
+GPIO.setup(37, GPIO.OUT)                #set pin 37 as output
+while 1:
+        GPIO.output(37, GPIO.HIGH)      #turn LED on
+        time.sleep(1)                   #sleep for 1 second
+        GPIO.output(37, GPIO.LOW)       #turn LED off
+        time.sleep(1)
+#GPIO.cleanup()         #"cleans up" GPIO pins, turns all pins "off"
