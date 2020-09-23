@@ -1,0 +1,27 @@
+#This code will be used to help with a single motor control test
+#PWM ramping up with computer control via console input
+import RPi.GPIO as GPIO
+import time
+
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(37, GPIO.OUT)
+pwm = GPIO.PWM(37, 50)          #sets f to 50Hz
+dc = 0                          #duty cycle inital value
+pwm.start(dc)
+
+
+a = int(input("Enter '9' for increase, '0' for decrease in duty cycle: "))
+print(a)
+if a > 5:
+        pwm.ChangeDutyCycle(dc = dc + 5)
+        print('duty cycle increased by 5%')
+time.sleep(1)
+
+if a < 5:
+        pwm.ChanngeDutyCycle(dc = dc - 5)
+        print('duty cycle decreased by 5%')
+        print('Current duty cycle is ')
+        print(dc)
+GPIO.cleanup()
+
