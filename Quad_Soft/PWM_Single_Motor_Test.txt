@@ -11,7 +11,7 @@ dc = 0                          #duty cycle inital value
 pwm.start(dc)
 
 while 1:
-        a = int(input("Enter '9' for increase, '0' for decrease in duty cycle: $
+        a = int(input())
         print(a)
         if a > 5:
                 dc = dc + 5
