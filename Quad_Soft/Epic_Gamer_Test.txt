@@ -1,3 +1,0 @@
-#This is the text file for epic_gamer_test
-t = 'This is the epic gamer test'
-print(t)
