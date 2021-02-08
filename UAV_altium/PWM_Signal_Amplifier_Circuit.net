@@ -1,0 +1,12 @@
+* C:\Users\chadl\Desktop\UAV_Quad\UAV_altium\PWM_Signal_Amplifier_Circuit.asc
+XU1 N001 N003 5V 0 N002 OP284
+V§P5V 5V 0 5
+V§PWM_3V3 N001 0 PULSE(0 3.3 0 0 0 1m 2m 5)
+R1 N003 0 6.0k
+R2 N002 N003 3k
+* pwm from RPi
+* pwm to ESC
+.tran 10m
+.lib ADI1.lib
+.backanno
+.end
