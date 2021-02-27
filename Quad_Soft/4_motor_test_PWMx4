@@ -1,14 +1,27 @@
-#This code will be used to help with a single motor control test
+#This code will be used to help with a multi motor control test
 #PWM ramping up with computer control via console input
 import RPi.GPIO as GPIO
 import time
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
+
 GPIO.setup(37, GPIO.OUT)
-freq = 590
-pwm = GPIO.PWM(37, freq)          #sets f to 590Hz, pin 37
-dc = 54                          #duty cycle inital value
+GPIO.setup(16, GPIO.OUT)
+GPIO.setup(22, GPIO.OUT)
+GPIO.setup(23, GPIO.OUT)
+
+freq37 = 590	#motor 1, pin 37 
+freq16 = 590	#motor 2, pin 16
+freq22 = 590	#motor 3, pin 22
+freq23 = 590	#motor 4, pin 23
+	
+pwm = GPIO.PWM(37, freq37)          #sets f to 590 Hz, pin 37
+pwm = GPIO.PWM(16, freq16)          #sets f to 590 Hz, pin 16
+pwm = GPIO.PWM(22, freq22)          #sets f to 590 Hz, pin 22
+pwm = GPIO.PWM(23, freq23)          #sets f to 590 Hz, pin 23
+
+dc = 54                          #duty cycle initial value (all motors share this duty cycle)
 pwm.start(dc)
 
 
@@ -16,50 +29,62 @@ while 1:
 
         a = int(input())
         print(a)
-        if a ==  0:
-                dc = dc + 1
+        if a ==  0:	#initial motor speed set: on
+                dc = 55
                 pwm.ChangeDutyCycle(dc)
                 print('duty cycle increased by 1%')
                 print('Current duty cycle is ')
-                print(dc)
+                print(dc '% duty cycle')
+#motor 1 pin 37
 
-        if a == 9:
-                dc = dc + 10
-                pwm.ChangeDutyCycle(dc)
-                print('duty cycle increased by 10%')
-                print('Current duty cycle is ')
-                print(dc)
-
-        if a == 8:
-                dc = dc - 10
-                pwm.ChangeDutyCycle(dc)
-                print('duty cycle is decreaesd by 10%%')
-                print(dc)
-
-        if a == 7:
-                dc = dc - 1
-                pwm.ChangeDutyCycle(dc)
-                print('duty cycle decreased by 1%')
-                print(dc)
-
-        if a == 4:
-                freq = freq + 1
-                pwm.ChangeFrequency(freq)
-                print(freq)
-
-        if a == 3:
-                freq = freq + 10
-                pwm.ChangeFrequency(freq)
-                print(freq)
+	if a == 1:
+                freq37 = freq37 - 1
+                pwm.ChangeFrequency(freq37)
+                print(freq37)	
 
         if a == 2:
-                freq = freq - 10
-                pwm.ChangeFrequency(freq)
-                print(freq)
+                freq37 = freq37 + 1
+                pwm.ChangeFrequency(freq37)
+                print(freq37)
 
-        if a == 1:
-                freq = freq - 1
-                pwm.ChangeFrequency(freq)
-                print(freq)
+
+ #motor 2 pin 16
+
+        if a == 3:
+                freq16 = freq16 + 1
+                pwm.ChangeFrequency(freq16)
+                print(freq16)
+
+        if a == 4:
+                freq16 = freq16 - 1
+                pwm.ChangeFrequency(freq16)
+                print(freq16)
+
+
+#motor 3 pin 22
+
+        if a == 5:
+                freq22 = freq22 + 1
+                pwm.ChangeFrequency(freq22)
+                print(freq22)
+
+        if a == 6:
+                freq22 = freq22 - 1
+                pwm.ChangeFrequency(freq22)
+                print(freq22)
+
+
+#motor 4 pin 23
+
+        if a == 7:
+                freq23 = freq23 + 1
+                pwm.ChangeFrequency(freq23)
+                print(freq23)
+
+        if a == 8:
+                freq23 = freq23 - 1
+                pwm.ChangeFrequency(freq23)
+                print(freq23)
+
 
 GPIO.cleanup()
