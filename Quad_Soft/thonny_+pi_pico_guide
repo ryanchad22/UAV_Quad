@@ -1,0 +1,10 @@
+micropython setup guide:
+
+1. Download Thonny here: https://thonny.org/
+2. Download Firmware file for RPi Pico: https://www.raspberrypi.org/documentation/rp2040/getting-started/#getting-started-with-micropython
+3. Scroll down and click on "Getting Started, MicroPython" and download the UF2 file
+4. plug in RPi while holding the boot button down, let go after you have plugged into the pc
+5. Open Thonny
+6. Click on Run > Select Interpreter > select micropython (raspberry pi pico)
+7. New File > select raspberry pi pico
+
