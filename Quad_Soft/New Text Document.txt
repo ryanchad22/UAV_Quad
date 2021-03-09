@@ -1,0 +1,14 @@
+from machine import Pin
+from time import sleep
+
+led = Pin(0, Pin.OUT)
+while True:
+        x = int(input())
+        print(x)
+        if x == 1:
+                led.high()
+                print('ASFE Path Selected')
+
+        else:
+                led.low()
+                print('Picoammeter Path Selected')
