@@ -1,0 +1,83 @@
+#This code will be used for a quad motor control test
+#PWM ramping up with computer control via console input
+import RPi.GPIO as GPIO
+import time
+
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(37, GPIO.OUT)
+GPIO.setup(22, GPIO.OUT)
+GPIO.setup(23, GPIO.OUT)
+GPIO.setup(16, GPIO.OUT)
+
+freq = 590
+freq1 = 590
+freq2 = 590
+freq3 = 590
+
+pwm = GPIO.PWM(37, freq)          #sets f to 590Hz, pin 37
+pwm1 = GPIO.PWM(22, freq1)
+pwm2 = GPIO.PWM(23, freq2)
+pwm3 = GPIO.PWM(16, freq3)
+
+dc = 54
+dc1 = 54
+dc2 = 54
+dc3 = 54                          #duty cycle inital value
+
+pwm.start(dc)
+pwm1.start(dc1)
+pwm2.start(dc2)
+pwm3.start(dc3)
+
+while 1:
+
+        a = int(input())
+        print(a)
+        if a ==  11:	#Motor 1 pin 37
+                dc = dc + 10
+                pwm.ChangeDutyCycle(dc)
+                print('duty cycle increased by 1%')
+                print('Current duty cycle is ')
+                print(dc)
+
+        if a == 12:	#Motor 1 pin 37
+                dc = dc - 10
+                pwm.ChangeDutyCycle(dc)
+                print('duty cycle decreased by 1%')
+                print('Current duty cycle is ')
+                print(dc)
+
+        if a == 21:	#Motor 2 pin 22
+                dc1 = dc1 + 10
+                pwm1.ChangeDutyCycle(dc1)
+                print('duty cycle is increaesed by 1%')
+                print(dc1)
+
+        if a == 22:	#Motor 2 pin 22
+                dc1 = dc1 - 10
+                pwm1.ChangeDutyCycle(dc1)
+                print('duty cycle decreased by 1%')
+                print(dc1)
+
+        if a == 101:	#Motor 1 pin 37
+                freq = freq + 10
+                pwm.ChangeFrequency(freq)
+                print(freq)
+
+        if a == 102:	#Motor 1 pin 37
+                freq = freq - 10
+                pwm.ChangeFrequency(freq)
+                print(freq)
+
+        if a == 201:	#Motor 2 pin 22
+                freq1 = freq1 + 10
+                pwm1.ChangeFrequency(freq1)
+                print(freq1)
+
+        if a == 202:	#Motor 2 pin 22
+                freq1 = freq1 - 10
+                pwm1.ChangeFrequency(freq1)
+                print(freq1)
+
+GPIO.cleanup()
