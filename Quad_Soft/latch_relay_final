@@ -1,0 +1,44 @@
+from machine import Pin
+from time import sleep
+
+#Relays to switch paths from ASFE/ammeter and to disconnect raspberry pi from Master relay (ASFE/ammeter switch relay)
+Master_P = Pin(0, Pin.OUT)  #Master "positive" relay switch, moves path from ASFE to ammeter (& vice versa)
+Master_N = Pin(1, Pin.OUT)  #Master "negative" relay switch, moves path from ASFE to ammeter (& vice versa)
+
+Pi_to_MP_P = Pin(3, Pin.OUT)   #Connects raspberry pi to ASFE/ammeter path Master relay (Master_P)
+Pi_to_MP_N = Pin(4, Pin.OUT)   #Connects raspberry pi to ASFE/ammeter path Master relay (Master_P)   
+
+Pi_to_MN_P = Pin(5, Pin.OUT)   #Connects raspberry pi to ASFE/ammeter path Master relay (Master_N)
+Pi_to_MN_N = Pin(6, Pin.OUT)   #Connects raspberry pi to ASFE/ammeter path Master relay (Master_N)
+
+
+#Relays to connect capacitor to ASFE for when ammeter is selected (zeros ASFE output)
+Cap_ASFE_P_P = Pin(8, Pin.OUT)   #Connects positive end of capacitor to ASFE positive input (positive relay input)
+Cap_ASFE_P_N = Pin(9, Pin.OUT)   #Connects positive end of capacitor to ASFE positive input (negative relay input)
+
+Cap_ASFE_N_P = Pin(10, Pin.OUT)   #Connects positive end of capacitor to ASFE positive input (positive relay input)
+Cap_ASFE_N_N = Pin(11, Pin.OUT)   #Connects positive end of capacitor to ASFE positive input (negative relay input)
+
+
+#Relays to connect resistor to ASFE for while switching back to or from ASFE input (protects ADA4530-1 while switching Master)
+Res_ASFE_P_P = Pin(13, Pin.OUT)   #Connects positive end of resistor to ASFE positive input (positive relay input)
+Res_ASFE_P_N = Pin(14, Pin.OUT)   #Connects positive end of resistor to ASFE positive input (negative relay input)
+
+Res_ASFE_N_P = Pin(15, Pin.OUT)   #Connects positive end of resistor to ASFE positive input (positive relay input)
+Res_ASFE_N_N = Pin(16, Pin.OUT)   #Connects positive end of resistor to ASFE positive input (negative relay input)
+
+
+while True:
+        x = int(input())
+        print(x)
+        if x == 12345: #switch to ASFE Path
+                Master_P.high()
+                Master_N.low()
+                print('ASFE Path Selected')
+
+        if x == 54321: #switch to Picoammeter Path
+                Master_P.low()
+                Master_N.high()
+                print('Picoammeter Path Selected')
+        else:
+                print('Path is unchanged')
