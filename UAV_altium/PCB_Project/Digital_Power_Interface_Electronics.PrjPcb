@@ -125,72 +125,101 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
+[Document6]
+DocumentPath=Job2.OutJob
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
 [GeneratedDocument1]
 DocumentPath=Project Outputs for Digital_Power_Interface_Electronics\Design Rule Check - digital_power_board.html
 DItemRevisionGUID=
 
 [GeneratedDocument2]
-DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.EXTREP
+DocumentPath=Project Outputs for Free Documents\NC Drill\digital_power_board.DRR
 DItemRevisionGUID=
 
 [GeneratedDocument3]
-DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.GBL
+DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument4]
-DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.GBO
+DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.GBL
 DItemRevisionGUID=
 
 [GeneratedDocument5]
-DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.GBP
+DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.GBO
 DItemRevisionGUID=
 
 [GeneratedDocument6]
-DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.GBS
+DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.GBP
 DItemRevisionGUID=
 
 [GeneratedDocument7]
-DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.GM1
+DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.GBS
 DItemRevisionGUID=
 
 [GeneratedDocument8]
-DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.GP1
+DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.GM1
 DItemRevisionGUID=
 
 [GeneratedDocument9]
-DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.GP2
+DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.GP1
 DItemRevisionGUID=
 
 [GeneratedDocument10]
-DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.GP3
+DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.GP2
 DItemRevisionGUID=
 
 [GeneratedDocument11]
-DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.GP4
+DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.GP3
 DItemRevisionGUID=
 
 [GeneratedDocument12]
-DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.GTL
+DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.GP4
 DItemRevisionGUID=
 
 [GeneratedDocument13]
-DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.GTO
+DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.GTL
 DItemRevisionGUID=
 
 [GeneratedDocument14]
-DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.GTP
+DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.GTO
 DItemRevisionGUID=
 
 [GeneratedDocument15]
-DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.GTS
+DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.GTP
 DItemRevisionGUID=
 
 [GeneratedDocument16]
-DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.REP
+DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.GTS
 DItemRevisionGUID=
 
 [GeneratedDocument17]
+DocumentPath=Project Outputs for Free Documents\NC Drill\digital_power_board.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument18]
+DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.REP
+DItemRevisionGUID=
+
+[GeneratedDocument19]
 DocumentPath=Project Outputs for Free Documents\Gerber\digital_power_board.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument20]
+DocumentPath=Project Outputs for Free Documents\NC Drill\digital_power_board.TXT
 DItemRevisionGUID=
 
 [Configuration1]
