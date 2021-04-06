@@ -1,1 +1,3 @@
-Record=TopLevelDocument|FileName=MPU6050_Gyro_Accel_Temp.SchDoc
+Record=TopLevelDocument|FileName=MPU6050_Gyro_Accel_Temp.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=MPU6050_Gyro_Accel_Temp.SchDoc|FileName=PWM_Signal_Amplifiers.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=MPU6050_Gyro_Accel_Temp.SchDoc|FileName=Voltage_Regulator_5V.SchDoc|SheetNumber= 
