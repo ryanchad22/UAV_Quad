@@ -30,7 +30,7 @@ ReportSuppressedErrorsInMessages=0
 FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
 IsProjectConflictPreventionWarningsEnabled=1
-OutputPath=Project Outputs for Digital_Power_Interface_Electronics
+OutputPath=
 LogFolderPath=
 ManagedProjectGUID=CBE58E67-70CE-492E-9096-6B2625C77E2D
 VaultGUID=59FE3B66-3ECD-4E60-B2D2-F5119C1C1829
@@ -244,7 +244,7 @@ ContentTypeGUID=CB6F2064-E317-11DF-B822-12313F0024A2
 ConfigurationType=Source
 
 [Generic_EDE]
-OutputDir=Project Outputs for Digital_Power_Interface_Electronics
+OutputDir=
 
 [OutputGroup1]
 Name=Netlist Outputs
