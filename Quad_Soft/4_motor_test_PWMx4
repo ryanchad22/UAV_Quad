@@ -19,7 +19,7 @@ freq23 = 590	#motor 4, pin 23
 pwm = GPIO.PWM(37, freq37)          #sets f to 590 Hz, pin 37
 pwm = GPIO.PWM(16, freq16)          #sets f to 590 Hz, pin 16
 pwm = GPIO.PWM(22, freq22)          #sets f to 590 Hz, pin 22
-pwm = GPIO.PWM(23, freq23)          #sets f to 590 Hz, pin 23
+pwm = GPIO.PWM(11, freq23)          #sets f to 590 Hz, pin 23
 
 dc = 54                          #duty cycle initial value (all motors share this duty cycle)
 pwm.start(dc)
