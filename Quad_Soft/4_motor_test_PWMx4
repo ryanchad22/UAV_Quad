@@ -34,7 +34,7 @@ while 1:
                 pwm.ChangeDutyCycle(dc)
                 print('duty cycle increased by 1%')
                 print('Current duty cycle is ')
-                print(dc '% duty cycle')
+                print(dc)
 #motor 1 pin 37
 
 	if a == 1:
