@@ -5,6 +5,7 @@
 #code integration by Chad Ryan
 
 import RPi.GPIO as GPIO
+import math
 import time
 import board
 import busio
