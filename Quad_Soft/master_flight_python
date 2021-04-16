@@ -36,7 +36,7 @@ pwm.start(dc)
 
 
 while 1:
-
+#mpu6050 feedback
 	print("Acceleration: X:%.2f, Y: %.2f, Z: %.2f m/s^2"%(mpu.acceleration))
 	print("Gyro X:%.2f, Y: %.2f, Z: %.2f degrees/s"%(mpu.gyro))
 	print("Temperature: %.2f C"%mpu.temperature)
@@ -50,6 +50,10 @@ while 1:
                 print('duty cycle increased by 1%')
                 print('Current duty cycle is ')
                 print(dc)
+		
+#end mpu6050 feedback
+
+#PWM control (frequency modulation)		
 #motor 1 pin 37
 
 	if a == 1:
