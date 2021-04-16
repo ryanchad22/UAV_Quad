@@ -1,0 +1,97 @@
+#master python code to operate UAV Quadcopter with mpu6050 feedback integration
+# "Drone Float"
+
+import RPi.GPIO as GPIO
+import time
+import board
+import busio
+import adafruit_mpu6050
+
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BOARD)
+
+GPIO.setup(37, GPIO.OUT)
+GPIO.setup(16, GPIO.OUT)
+GPIO.setup(22, GPIO.OUT)
+GPIO.setup(11, GPIO.OUT)
+
+freq37 = 590	#motor 1, pin 37 
+freq16 = 590	#motor 2, pin 16
+freq22 = 590	#motor 3, pin 22
+freq23 = 590	#motor 4, pin 11
+	
+pwm = GPIO.PWM(37, freq37)          #sets f to 590 Hz, pin 37
+pwm = GPIO.PWM(16, freq16)          #sets f to 590 Hz, pin 16
+pwm = GPIO.PWM(22, freq22)          #sets f to 590 Hz, pin 22
+pwm = GPIO.PWM(11, freq23)          #sets f to 590 Hz, pin 23
+
+i2c = busio.I2C(board.SCL, board.SDA)
+mpu = adafruit_mpu6050.MPU6050(i2c)
+
+dc = 54                          #duty cycle initial value (all motors share this duty cycle)
+pwm.start(dc)
+
+
+while 1:
+
+        a = int(input())
+        print(a)
+        if a ==  0:	#initial motor speed set: on
+                dc = 55
+                pwm.ChangeDutyCycle(dc)
+                print('duty cycle increased by 1%')
+                print('Current duty cycle is ')
+                print(dc)
+#motor 1 pin 37
+
+	if a == 1:
+                freq37 = freq37 - 1
+                pwm.ChangeFrequency(freq37)
+                print(freq37)	
+
+        if a == 2:
+                freq37 = freq37 + 1
+                pwm.ChangeFrequency(freq37)
+                print(freq37)
+
+
+ #motor 2 pin 16
+
+        if a == 3:
+                freq16 = freq16 + 1
+                pwm.ChangeFrequency(freq16)
+                print(freq16)
+
+        if a == 4:
+                freq16 = freq16 - 1
+                pwm.ChangeFrequency(freq16)
+                print(freq16)
+
+
+#motor 3 pin 22
+
+        if a == 5:
+                freq22 = freq22 + 1
+                pwm.ChangeFrequency(freq22)
+                print(freq22)
+
+        if a == 6:
+                freq22 = freq22 - 1
+                pwm.ChangeFrequency(freq22)
+                print(freq22)
+
+
+#motor 4 pin 23
+
+        if a == 7:
+                freq23 = freq23 + 1
+                pwm.ChangeFrequency(freq23)
+                print(freq23)
+
+        if a == 8:
+                freq23 = freq23 - 1
+                pwm.ChangeFrequency(freq23)
+                print(freq23)
+
+
+GPIO.cleanup()
