@@ -16,14 +16,16 @@ freq16 = 590	#motor 2, pin 16
 freq22 = 590	#motor 3, pin 22
 freq23 = 590	#motor 4, pin 23
 	
-pwm = GPIO.PWM(37, freq37)          #sets f to 590 Hz, pin 37
-pwm = GPIO.PWM(16, freq16)          #sets f to 590 Hz, pin 16
-pwm = GPIO.PWM(22, freq22)          #sets f to 590 Hz, pin 22
-pwm = GPIO.PWM(11, freq23)          #sets f to 590 Hz, pin 23
+pwm37 = GPIO.PWM(37, freq37)          #sets f to 590 Hz, pin 37
+pwm16 = GPIO.PWM(16, freq16)          #sets f to 590 Hz, pin 16
+pwm22 = GPIO.PWM(22, freq22)          #sets f to 590 Hz, pin 22
+pwm11 = GPIO.PWM(11, freq23)          #sets f to 590 Hz, pin 23
 
 dc = 54                          #duty cycle initial value (all motors share this duty cycle)
-pwm.start(dc)
-
+pwm37.start(dc)
+pwm16.start(dc)
+pwm22.start(dc)
+pwm11.start(dc)
 
 while 1:
 
@@ -31,7 +33,10 @@ while 1:
         print(a)
         if a ==  0:	#initial motor speed set: on
                 dc = 55
-                pwm.ChangeDutyCycle(dc)
+                pwm37.ChangeDutyCycle(dc)
+		pwm16.ChangeDutyCycle(dc)
+		pwm22.ChangeDutyCycle(dc)
+		pwm11.ChangeDutyCycle(dc)
                 print('duty cycle increased by 1%')
                 print('Current duty cycle is ')
                 print(dc)
@@ -39,12 +44,12 @@ while 1:
 
 	if a == 1:
                 freq37 = freq37 - 1
-                pwm.ChangeFrequency(freq37)
+                pwm37.ChangeFrequency(freq37)
                 print(freq37)	
 
         if a == 2:
                 freq37 = freq37 + 1
-                pwm.ChangeFrequency(freq37)
+                pwm37.ChangeFrequency(freq37)
                 print(freq37)
 
 
@@ -52,12 +57,12 @@ while 1:
 
         if a == 3:
                 freq16 = freq16 + 1
-                pwm.ChangeFrequency(freq16)
+                pwm16.ChangeFrequency(freq16)
                 print(freq16)
 
         if a == 4:
                 freq16 = freq16 - 1
-                pwm.ChangeFrequency(freq16)
+                pwm16.ChangeFrequency(freq16)
                 print(freq16)
 
 
@@ -65,12 +70,12 @@ while 1:
 
         if a == 5:
                 freq22 = freq22 + 1
-                pwm.ChangeFrequency(freq22)
+                pwm22.ChangeFrequency(freq22)
                 print(freq22)
 
         if a == 6:
                 freq22 = freq22 - 1
-                pwm.ChangeFrequency(freq22)
+                pwm22.ChangeFrequency(freq22)
                 print(freq22)
 
 
@@ -78,12 +83,12 @@ while 1:
 
         if a == 7:
                 freq23 = freq23 + 1
-                pwm.ChangeFrequency(freq23)
+                pwm11.ChangeFrequency(freq23)
                 print(freq23)
 
         if a == 8:
                 freq23 = freq23 - 1
-                pwm.ChangeFrequency(freq23)
+                pwm11.ChangeFrequency(freq23)
                 print(freq23)
 
 
