@@ -31,7 +31,7 @@ while 1:
 
         a = int(input())
         print(a)
-        if a ==  0:	#initial motor speed set: on
+        if a ==  10:	#initial motor speed set: on
                 dc = 55
                 pwm37.ChangeDutyCycle(dc)
 		pwm16.ChangeDutyCycle(dc)
@@ -40,6 +40,35 @@ while 1:
                 print('duty cycle increased by 1%')
                 print('Current duty cycle is ')
                 print(dc)
+		
+	if a == 100:
+                freq37 = freq37 - 2
+                pwm37.ChangeFrequency(freq37)
+                print(freq37)	
+                freq16 = freq16 - 2
+                pwm16.ChangeFrequency(freq16)
+                print(freq16)
+		freq22 = freq22 - 2
+                pwm22.ChangeFrequency(freq22)
+                print(freq22)
+		freq23 = freq23 - 2
+                pwm11.ChangeFrequency(freq23)
+                print(freq23)
+
+	if a == 0:
+                freq37 = freq37 + 2
+                pwm37.ChangeFrequency(freq37)
+                print(freq37)	
+                freq16 = freq16 + 2
+                pwm16.ChangeFrequency(freq16)
+                print(freq16)
+		freq22 = freq22 + 2
+                pwm22.ChangeFrequency(freq22)
+                print(freq22)
+		freq23 = freq23 + 2
+                pwm11.ChangeFrequency(freq23)
+                print(freq23)
+		
 #motor 1 pin 37
 
 	if a == 1:
