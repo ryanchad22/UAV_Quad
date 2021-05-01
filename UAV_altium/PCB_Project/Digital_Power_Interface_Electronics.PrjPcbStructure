@@ -1,5 +1,3 @@
-Record=TopLevelDocument|FileName=ADC_MUX.SchDoc|SheetNumber= 
-Record=NoMainPathDocument|SourceDocument=ADC_MUX.SchDoc|FileName=FPGA_UAV.SchDoc|SheetNumber= 
-Record=NoMainPathDocument|SourceDocument=ADC_MUX.SchDoc|FileName=MPU6050_Gyro_Accel_Temp.SchDoc|SheetNumber= 
-Record=NoMainPathDocument|SourceDocument=ADC_MUX.SchDoc|FileName=PWM_Signal_Amplifiers.SchDoc|SheetNumber= 
-Record=NoMainPathDocument|SourceDocument=ADC_MUX.SchDoc|FileName=Voltage_Regulator_5V.SchDoc|SheetNumber= 
+Record=TopLevelDocument|FileName=MPU6050_Gyro_Accel_Temp.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=MPU6050_Gyro_Accel_Temp.SchDoc|FileName=PWM_Signal_Amplifiers.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=MPU6050_Gyro_Accel_Temp.SchDoc|FileName=Voltage_Regulator_5V.SchDoc|SheetNumber= 
